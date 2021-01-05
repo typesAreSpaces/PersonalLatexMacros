@@ -43,18 +43,24 @@
 \newcommand{\RR}[0]{\mathbb{R}}
 \newcommand{\ZZ}[0]{\mathbb{Z}}
 \newcommand{\NN}[0]{\mathbb{N}}
-\newcommand{\NNexp}[1]{\mathbb{N}^#1}
-\newcommand{\join}[3]{#1 \downarrow_{#3} #2}
-\newcommand{\grob}[0]{Gr\"obner}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\polyring}[2]{#1[X_1, \dots, X_#2]}
+\newcommand{\extcong}[3]{#1 \cong #2 \text{ } #3}
+
 \newcommand{\bigO}[1]{$\mathcal{O}(#1)$}
-\newcommand{\cev}[1]{\underline{#1}}
-\newcommand{\qall}[2]{\forall #1 . \text{ } #2}
-\newcommand{\qex}[2]{\exists #1 . \text{ } #2}
+
+\newcommand{\grob}[0]{Gr\"obner}
+
+\newcommand{\join}[3]{#1 \downarrow_{#3} #2}
 \newcommand{\rrule}[1]{\rightarrow_{#1}}
 \newcommand{\lrule}[1]{\leftarrow_{#1}}
+
+\newcommand{\cev}[1]{\underline{#1}}
 \newcommand{\another}[1]{#1^{'}}
-\newcommand{\extcong}[3]{#1 \cong #2 \text{ } #3}
-\newcommand{\polyring}[4]{}
+
+\newcommand{\qall}[2]{\forall #1 . \text{ } #2}
+\newcommand{\qex}[2]{\exists #1 . \text{ } #2}
+
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
