@@ -3,12 +3,16 @@
 %% Author: Jose Abel Castellanos Joo
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{symbols}[2020/01/05 Personal macros]
+\ProvidesPackage{symbols}[2020/01/20 Personal macros]
 
+\RequirePackage{xcolor}
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{tikz}
+\RequirePackage{listings}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -74,14 +78,3 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{example}{Example}[definition]
-
-\tikzset{
-  module/.style={%
-    draw, rounded corners,
-    minimum width=#1,
-    minimum height=7mm,
-    font=\sffamily
-  },
-  module/.default=2cm,
-  >=LaTeX
-}
