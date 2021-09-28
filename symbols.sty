@@ -44,6 +44,15 @@
   \small	
   \textbf{	extit{Keywords---}} #1
 }
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[definition]
+\newtheorem*{remark}{Remark}
+
 \newcommand{\NN}[0]{\mathbb{N}}
 \newcommand{\ZZ}[0]{\mathbb{Z}}
 \newcommand{\QQ}[0]{\mathbb{Q}}
@@ -86,21 +95,17 @@
 
 \newcommand{\separationline}[0]{0.75}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[definition]
-\newtheorem*{remark}{Remark}
-
-\DeclareMathOperator{\spec}{Spec}
-\DeclareMathOperator{\mspec}{m-Spec}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Irr}{Irr}
+
 \DeclareMathOperator{\Int}{Int}
 \DeclareMathOperator{\Cl}{Cl}
+
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\mspec}{m-Spec}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sper}{Sper}
 \DeclareMathOperator{\semisper}{Semi-Sper}
+
 \DeclareMathOperator{\sgn}{sgn}
