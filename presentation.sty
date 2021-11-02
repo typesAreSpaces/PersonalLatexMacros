@@ -1,9 +1,9 @@
-%% symbols.sty
+%% presentation.sty
 %%
 %% Author: Jose Abel Castellanos Joo
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{symbols}[11/01/2021 Personal macros]
+\ProvidesPackage{presentation}[11/01/2021 Personal macros]
 
 \RequirePackage{algorithm}
 \RequirePackage{algpseudocode}
@@ -17,16 +17,13 @@
 \RequirePackage{cite}
 \RequirePackage{ebproof}
 \RequirePackage{etoolbox}
+\RequirePackage{fancyvrb}
 \RequirePackage{float}
 \RequirePackage{glossaries}
 \RequirePackage{graphics}
 \RequirePackage{graphicx}
-\RequirePackage[breaklinks,hidelinks]{hyperref}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[xcolor, hyperref, notion, makeidx]{knowledge}
 \RequirePackage{listing}
 \RequirePackage{listings}
-\RequirePackage{makeidx}
 \RequirePackage{mathrsfs}
 \RequirePackage{mathtools}
 \RequirePackage{multirow}
@@ -65,12 +62,7 @@
 }
 \lstset{style=code-style}
 
-\newtheorem{theorem}{Theorem}[section]
 \newtheorem{notation}{Notation}[section]
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[definition]
 \newtheorem*{remark}{Remark}
 
 % Keywords command
