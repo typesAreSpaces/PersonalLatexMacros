@@ -6,7 +6,7 @@ updatePresentation:
 	touch ./presentation.sty
 	cat ./presentation-packages.sty >> ./presentation.sty
 	cat ./colors.sty >> ./presentation.sty
-	cat ./presentation-colors.sty >> ./presentation.sty
+	cat ./presentation-settings.sty >> ./presentation.sty
 	cat ./presentation-math-environment.sty >> ./presentation.sty
 	cat ./commandsAndDeclarations.sty >> ./presentation.sty
 	echo "presentation.sty updated."

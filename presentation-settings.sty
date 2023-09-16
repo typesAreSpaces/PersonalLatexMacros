@@ -1,4 +1,5 @@
 % UNM colors
+
 \definecolor{unmwhite1}{rgb}{0.94,0.93,0.94}
 \definecolor{unmgray1}{rgb}{0.44,0.4,0.42}
 \definecolor{unmgray2}{rgb}{0.54,0.48,0.5}
@@ -19,3 +20,25 @@
 \setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
 \setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
 \setbeamercolor{frametitle}{bg=unmred1!10!unmwhite1,fg=unmgray1}
+
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+      \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}%
+    \end{beamercolorbox}%
+  }%
+}%
+
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{navigation symbols}{}{%
+  \usebeamerfont{footline}%
+  \usebeamercolor[fg]{footline}%
+  \hspace{1em}%
+  {\scriptsize\insertframenumber/\inserttotalframenumber}%
+}%
+
+\setbeamertemplate{footline}{}

@@ -1,2 +1,14 @@
+\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{notation}{Notation}[section]
 \newtheorem*{remark}{Remark}
+
+\newcommand*{\theorembreak}{%
+  \usebeamertemplate{theorem end}%
+  \framebreak%
+  \usebeamertemplate{theorem begin}%
+}%
+\newcommand*{\definitionbreak}{%
+  \usebeamertemplate{definition end}%
+  \framebreak%
+  \usebeamertemplate{definition begin}%
+}%
