@@ -1,0 +1,75 @@
+%% symbols.sty
+%%
+%% Author: Jose Abel Castellanos Joo
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{symbols}[10/17/2022 Personal macros]
+
+\RequirePackage[ruled, lined, linesnumbered,
+longend]{algorithm2e}
+\RequirePackage{array}
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{caption}
+%\RequirePackage{cite}
+\RequirePackage{ebproof}
+\RequirePackage{etoolbox}
+\RequirePackage{float}
+\RequirePackage{graphics}
+\RequirePackage{graphicx}
+\RequirePackage[breaklinks]{hyperref}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{listing}
+\RequirePackage{listings}
+\RequirePackage{makeidx}
+\RequirePackage{mathrsfs}
+\RequirePackage{mathtools}
+\RequirePackage{multirow}
+\RequirePackage{pdfpages}
+\RequirePackage{rotating}
+\ProvidesPackage{setspace}
+\RequirePackage{tikz}
+\RequirePackage{tikz-cd}
+\RequirePackage{url}
+\RequirePackage{verbatim}
+\RequirePackage{xcolor}
+\RequirePackage{xspace}
+\RequirePackage[reftex]{theoremref}
+\RequirePackage{csquotes}
+\usetikzlibrary{positioning,fit,arrows.meta,backgrounds,cd}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{remark}{Remark}
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{	extit{Keywords---}} #1
+}
+
+\SetKwInput{kwRequires}{Requires}
+\SetKwInput{kwEnsures}{Ensures}
+\SetKwInput{kwInput}{Input}
+\SetKwInput{kwOutput}{Output}
+\SetKw{kwGoto}{Go to}
+\SetKw{kwBreak}{break}
+\SetKw{kwContinue}{continue}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu #1 \mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\bigO}[1]{$\mathcal{O}(#1)$}
+
+\newcommand{\qall}[2]{\forall #1 , \text{ } #2}
+\newcommand{\qex}[2]{\exists #1 , \text{ } #2}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\newcommand{\separationline}[0]{0.75}
