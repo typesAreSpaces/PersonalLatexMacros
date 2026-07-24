@@ -32,6 +32,7 @@ longend]{algorithm2e}
 \RequirePackage{quantikz}
 \RequirePackage{rotating}
 \ProvidesPackage{setspace}
+\RequirePackage{stmaryrd}
 \RequirePackage{tikz}
 \RequirePackage{tikz-cd}
 \RequirePackage{url}
@@ -66,10 +67,12 @@ longend]{algorithm2e}
 \SetKw{kwContinue}{continue}
 
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu #1 \mkern-1.5mu}\mkern 1.5mu}
-\newcommand{\bigO}[1]{$\mathcal{O}(#1)$}
+\newcommand{\bigO}[1]{\mathcal{O}(#1)}
 
 \newcommand{\qall}[2]{\forall #1 , \text{ } #2}
 \newcommand{\qex}[2]{\exists #1 , \text{ } #2}
+\newcommand{\xor}[0]{\oplus}
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
