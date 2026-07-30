@@ -1,4 +1,4 @@
-all: updatePresentation updateSymbols updateJose
+all: updatePresentation updateSymbols updateQuantum
 	echo "File updated."
 
 updatePresentation:
@@ -20,17 +20,17 @@ updateSymbols:
 	cat ./commandsAndDeclarations.sty >> ./symbols.sty
 	echo "symbols.sty updated."
 
-updateJose:
-	rm -rf ./jose.sty
-	touch ./jose.sty
-	cat ./jose-packages.sty >> ./jose.sty
-	cat ./jose-math-environment.sty >> ./jose.sty
-	cat ./QuantumCommandsAndDeclarations.sty >> ./jose.sty
-	echo "jose.sty updated."
+updateQuantum:
+	rm -rf ./quantum_symbols.sty
+	touch ./quantum_symbols.sty
+	cat ./quantum-packages.sty >> ./quantum_symbols.sty
+	cat ./quantum-math-environment.sty >> ./quantum_symbols.sty
+	cat ./QuantumCommandsAndDeclarations.sty >> ./quantum_symbols.sty
+	echo "quantum_symbols.sty updated."
 
 .PHONY: clean
 
 clean:
 	rm -rf ./presentation.sty 
 	rm -rf ./symbols.sty 
-	rm -rf ./jose.sty 
+	rm -rf ./quantum_symbols.sty 
