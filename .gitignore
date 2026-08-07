@@ -1,5 +1,6 @@
 presentation.sty
 symbols.sty
+quantum_symbols.sty
 auto*
 .DS_Store
 !QuantumCommandsAndDeclarations.sty
