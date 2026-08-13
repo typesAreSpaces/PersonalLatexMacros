@@ -21,6 +21,47 @@
 \newcommand{\xor}[0]{\oplus}
 \newcommand{\sem}[1]{\llbracket #1 \rrbracket}
 \newcommand{\toff}[0]{\mathrm{Toffoli}}
+\newcommand{\notg}[0]{\mathrm{NOT}}
+
+\newcommand{\hadamardmatrix}[0]{\frac{1}{\sqrt{2}}%
+  \begin{bmatrix}
+    1 & 1\\
+    1 & -1
+  \end{bmatrix}}
+\newcommand{\cnotmatrix}[0]{\begin{bmatrix}%
+  1&0&0&0\\
+  0&1&0&0\\
+  0&0&0&1\\
+  0&0&1&0
+\end{bmatrix}}
+\newcommand{\tmatrix}[0]{\begin{bmatrix}%
+  1 & 0\\
+  0 & e^{i\pi/4}
+\end{bmatrix}}
+\newcommand{\toffolimatrix}[0]{\begin{bmatrix}%
+  1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+  0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+  0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+  0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+  0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+  0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+  0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+  0 & 0 & 0 & 0 & 0 & 0 & 1 & 0
+\end{bmatrix}}
+\newcommand{\rxmatrix}[0]{\begin{bmatrix}%
+  \cos{\frac{\theta}{2}} & -i \sin{\frac{\theta}{2}} \\
+  -i \sin{\frac{\theta}{2}} & \cos{\frac{\theta}{2}}
+\end{bmatrix}}
+\newcommand{\rymatrix}[0]{\begin{bmatrix}%
+  \cos{\frac{\theta}{2}} & -\sin{\frac{\theta}{2}} \\
+  \sin{\frac{\theta}{2}} & \cos{\frac{\theta}{2}}
+\end{bmatrix}}
+\newcommand{\rzmatrix}[0]{\begin{bmatrix}%
+  e^{-i \frac{\theta}{2}} & 0\\
+  0 & e^{i \frac{\theta}{2}}
+\end{bmatrix}}
+
+\newcommand{\barrierl}[1]{\slice[style=black]{#1}}
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
