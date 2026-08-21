@@ -21,16 +21,16 @@ updateSymbols:
 	echo "symbols.sty updated."
 
 updateQuantum:
-	rm -rf ./quantum_symbols.sty
-	touch ./quantum_symbols.sty
-	cat ./quantum-packages.sty >> ./quantum_symbols.sty
-	cat ./quantum-math-environment.sty >> ./quantum_symbols.sty
-	cat ./QuantumCommandsAndDeclarations.sty >> ./quantum_symbols.sty
-	echo "quantum_symbols.sty updated."
+	rm -rf ./quantumsymbols.sty
+	touch ./quantumsymbols.sty
+	cat ./quantum-packages.sty >> ./quantumsymbols.sty
+	cat ./quantum-math-environment.sty >> ./quantumsymbols.sty
+	cat ./QuantumCommandsAndDeclarations.sty >> ./quantumsymbols.sty
+	echo "quantumsymbols.sty updated."
 
 .PHONY: clean
 
 clean:
 	rm -rf ./presentation.sty 
 	rm -rf ./symbols.sty 
-	rm -rf ./quantum_symbols.sty 
+	rm -rf ./quantumsymbols.sty 
