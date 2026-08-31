@@ -68,9 +68,12 @@ longend]{algorithm2e}
 
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu #1 \mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\bigO}[1]{\mathcal{O}(#1)}
+\newcommand{\tildebigO}[1]{\widetilde{\mathcal{O}}(#1)}
 
-\newcommand{\qall}[2]{\forall #1 , \text{ } #2}
-\newcommand{\qex}[2]{\exists #1 , \text{ } #2}
+\newcommand{\redmark}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+
+\newcommand{\qall}[2]{\forall\,#1\;.\;#2}
+\newcommand{\qex}[2]{\exists\,#1\;.\;#2}
 \newcommand{\xor}[0]{\oplus}
 \newcommand{\sem}[1]{\llbracket #1 \rrbracket}
 \newcommand{\toff}[0]{\mathrm{Toffoli}}
@@ -93,6 +96,7 @@ longend]{algorithm2e}
 \newcommand{\conjM}[2]{#1 #2 #1^{\dag}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\su}{\operatorname{SU}}
+\newcommand{\poly}{\operatorname{poly}}
 
 \newcommand{\hadamardmatrix}[0]{\frac{1}{\sqrt{2}}%
   \begin{bmatrix}
@@ -158,5 +162,7 @@ longend]{algorithm2e}
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\DeclareMathOperator{\Span}{span}
 
 \newcommand{\separationline}[0]{0.75}

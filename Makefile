@@ -2,8 +2,7 @@ all: updatePresentation updateSymbols updateQuantum
 	echo "File updated."
 
 updatePresentation:
-	rm -rf ./presentation.sty
-	touch ./presentation.sty
+	truncate -s 0 ./presentation.sty
 	cat ./presentation-packages.sty >> ./presentation.sty
 	cat ./colors.sty >> ./presentation.sty
 	cat ./presentation-settings.sty >> ./presentation.sty
@@ -12,8 +11,7 @@ updatePresentation:
 	echo "presentation.sty updated."
 
 updateSymbols:
-	rm -rf ./symbols.sty
-	touch ./symbols.sty
+	truncate -s 0 ./symbols.sty
 	cat ./symbols-packages.sty >> ./symbols.sty
 	cat ./colors.sty >> ./symbols.sty
 	cat ./symbols-math-environment.sty >> ./symbols.sty
@@ -21,16 +19,8 @@ updateSymbols:
 	echo "symbols.sty updated."
 
 updateQuantum:
-	rm -rf ./quantumsymbols.sty
-	touch ./quantumsymbols.sty
+	truncate -s 0 ./quantumsymbols.sty
 	cat ./quantum-packages.sty >> ./quantumsymbols.sty
 	cat ./quantum-math-environment.sty >> ./quantumsymbols.sty
 	cat ./QuantumCommandsAndDeclarations.sty >> ./quantumsymbols.sty
 	echo "quantumsymbols.sty updated."
-
-.PHONY: clean
-
-clean:
-	rm -rf ./presentation.sty 
-	rm -rf ./symbols.sty 
-	rm -rf ./quantumsymbols.sty 
