@@ -1,7 +1,4 @@
-presentation.sty
-symbols.sty
-quantum_symbols.sty
-auto*
-.DS_Store
-!QuantumCommandsAndDeclarations.sty
-QuantumCommandsAndDeclarations*
+!*.sty
+!Makefile
+!README.md
+*

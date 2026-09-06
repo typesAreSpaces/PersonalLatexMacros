@@ -1,36 +1,39 @@
-all: presentation.sty presentationQ.sty symbols.sty quantumsymbols.sty
-	echo "Files updated."
+all: symbols.sty quantumsymbols.sty \
+	presentation.sty presentationQ.sty 
+	echo "LaTeX macros updated."
 
-presentation.sty:
+symbols.sty: symbols-packages.sty colors.sty \
+	symbols-math-environment.sty \
+	commandsAndDeclarations.sty
 	truncate -s 0 $@
-	cat presentation-packages.sty >> $@
-	cat colors.sty >> $@
-	cat presentation-settings.sty >> $@
-	cat presentation-math-environment.sty >> @a
-	cat commandsAndDeclarations.sty >> $@
-	echo "presentation.sty updated."
-
-presentationQ.sty:
-	truncate -s 0 $@
-	cat quantum-packages.sty >> $@
-	cat colors.sty >> $@
-	cat presentation-settings.sty >> $@
-	cat presentation-math-environment.sty >> $@
-	cat QuantumCommandsAndDeclarations.sty >> $@
-	echo "presentationQ.sty updated."
-
-symbols.sty:
-	truncate -s 0 $@
-	cat symbols-packages.sty >> $@
-	cat colors.sty >> $@
-	cat symbols-math-environment.sty >> $@
-	cat commandsAndDeclarations.sty >> $@
+	cat $^ > $@
 	echo "symbols.sty updated."
 
-quantumsymbols.sty:
+quantumsymbols.sty: quantum-packages.sty colors.sty \
+	quantum-math-environment.sty \
+	QuantumCommandsAndDeclarations.sty
 	truncate -s 0 $@
-	cat quantum-packages.sty >> $@
-	cat colors.sty >> $@
-	cat quantum-math-environment.sty >> $@
-	cat QuantumCommandsAndDeclarations.sty >> $@
+	cat $^ > $@
 	echo "quantumsymbols.sty updated."
+
+presentation.sty: presentation-packages.sty colors.sty \
+	presentation-settings.sty presentation-math-environment.sty \
+	commandsAndDeclarations.sty
+	truncate -s 0 $@
+	cat $^ > $@	
+	echo "presentation.sty updated."
+
+presentationQ.sty: presentationQ-packages.sty colors.sty \
+	presentation-settings.sty presentation-math-environment.sty \
+	QuantumCommandsAndDeclarations.sty
+	truncate -s 0 $@
+	cat $^ > $@	
+	echo "presentationQ.sty updated."
+
+.PHONY: clean
+
+clean:
+	rm -rf *.aux
+	rm -rf *.fdb_latexmk
+	rm -rf *.fls
+	rm -rf *.log
