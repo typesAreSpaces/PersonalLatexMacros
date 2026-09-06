@@ -42,15 +42,87 @@ longend]{algorithm2e}
 \RequirePackage[reftex]{theoremref}
 \RequirePackage{csquotes}
 \usetikzlibrary{positioning,fit,arrows.meta,backgrounds,cd}
-\newtheorem{theorem}{Theorem}[subsection]
-\newtheorem{notation}[theorem]{Notation}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{example}[theorem]{Example}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+\lstdefinestyle{code-style}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=false,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+\lstset{style=code-style}
+% UNM colors
+
+\definecolor{unmwhite1}{rgb}{0.94,0.93,0.94}
+\definecolor{unmgray1}{rgb}{0.44,0.4,0.42}
+\definecolor{unmgray2}{rgb}{0.54,0.48,0.5}
+\definecolor{unmgray3}{rgb}{0.59,0.6,0.6}
+\definecolor{unmgray4}{rgb}{0.74,0.68,0.69}
+\definecolor{unmgray5}{rgb}{0.75,0.76,0.76}
+\definecolor{unmred1}{rgb}{0.73,0.14,0.21}
+\definecolor{unmred2}{rgb}{0.8,0.61,0.62}
+\definecolor{unmred3}{rgb}{0.79,0.29,0.39}
+\definecolor{unmred4}{rgb}{0.92,0.75,0.76}
+
+\setbeamercolor{structure}{bg=unmgray1,fg=unmred2}
+\setbeamercolor{palette primary}{bg=unmred1, fg=unmwhite1}
+\setbeamercolor{palette secondary}{bg=unmgray1, fg=unmgray1}
+\setbeamercolor{palette tertiary}{bg=unmred2, fg=unmgray1}
+\setbeamercolor{palette quaternary}{bg=unmred3, fg=unmwhite1}
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
+\setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
+\setbeamercolor{frametitle}{bg=unmred1!10!unmwhite1,fg=unmgray1}
+
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+      \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}%
+    \end{beamercolorbox}%
+  }%
+}%
+
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{navigation symbols}{}{%
+  \usebeamerfont{footline}%
+  \usebeamercolor[fg]{footline}%
+  \hspace{1em}%
+  {\scriptsize\insertframenumber/\inserttotalframenumber}%
+}%
+
+\setbeamertemplate{footline}{}
 \newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{notation}{Notation}[section]
 \newtheorem*{remark}{Remark}
+
+\newcommand*{\theorembreak}{%
+  \usebeamertemplate{theorem end}%
+  \framebreak%
+  \usebeamertemplate{theorem begin}%
+}%
+\newcommand*{\definitionbreak}{%
+  \usebeamertemplate{definition end}%
+  \framebreak%
+  \usebeamertemplate{definition begin}%
+}%
 % Keywords command
 \providecommand{\keywords}[1]
 {

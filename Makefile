@@ -1,26 +1,36 @@
-all: updatePresentation updateSymbols updateQuantum
-	echo "File updated."
+all: presentation.sty presentationQ.sty symbols.sty quantumsymbols.sty
+	echo "Files updated."
 
-updatePresentation:
-	truncate -s 0 ./presentation.sty
-	cat ./presentation-packages.sty >> ./presentation.sty
-	cat ./colors.sty >> ./presentation.sty
-	cat ./presentation-settings.sty >> ./presentation.sty
-	cat ./presentation-math-environment.sty >> ./presentation.sty
-	cat ./commandsAndDeclarations.sty >> ./presentation.sty
+presentation.sty:
+	truncate -s 0 $@
+	cat presentation-packages.sty >> $@
+	cat colors.sty >> $@
+	cat presentation-settings.sty >> $@
+	cat presentation-math-environment.sty >> @a
+	cat commandsAndDeclarations.sty >> $@
 	echo "presentation.sty updated."
 
-updateSymbols:
-	truncate -s 0 ./symbols.sty
-	cat ./symbols-packages.sty >> ./symbols.sty
-	cat ./colors.sty >> ./symbols.sty
-	cat ./symbols-math-environment.sty >> ./symbols.sty
-	cat ./commandsAndDeclarations.sty >> ./symbols.sty
+presentationQ.sty:
+	truncate -s 0 $@
+	cat quantum-packages.sty >> $@
+	cat colors.sty >> $@
+	cat presentation-settings.sty >> $@
+	cat presentation-math-environment.sty >> $@
+	cat QuantumCommandsAndDeclarations.sty >> $@
+	echo "presentationQ.sty updated."
+
+symbols.sty:
+	truncate -s 0 $@
+	cat symbols-packages.sty >> $@
+	cat colors.sty >> $@
+	cat symbols-math-environment.sty >> $@
+	cat commandsAndDeclarations.sty >> $@
 	echo "symbols.sty updated."
 
-updateQuantum:
-	truncate -s 0 ./quantumsymbols.sty
-	cat ./quantum-packages.sty >> ./quantumsymbols.sty
-	cat ./quantum-math-environment.sty >> ./quantumsymbols.sty
-	cat ./QuantumCommandsAndDeclarations.sty >> ./quantumsymbols.sty
+quantumsymbols.sty:
+	truncate -s 0 $@
+	cat quantum-packages.sty >> $@
+	cat colors.sty >> $@
+	cat quantum-math-environment.sty >> $@
+	cat QuantumCommandsAndDeclarations.sty >> $@
 	echo "quantumsymbols.sty updated."
